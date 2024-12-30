@@ -1,13 +1,14 @@
 name: Integration Test
-on: [push]
+
+on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: Self test
-        id: selftest
-        uses: muesli/readme-scribe@master
+      - name: Test
+        uses: ./
         env:
           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
         with:

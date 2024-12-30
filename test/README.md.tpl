@@ -1,6 +1,6 @@
 ### Hi there 👋
 
-Want your own awesome profile page? Check out [markscribe](https://github.com/muesli/markscribe)!
+Want your own awesome profile page? Check out [markscribe2](https://github.com/sheerlox/markscribe2)!
 
 #### 🌱 Check out what I'm currently working on
 {{range recentRepos 10}}
