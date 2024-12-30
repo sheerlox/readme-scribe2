@@ -8,7 +8,7 @@ A GitHub Action that automatically generates & updates markdown content (like yo
 place it anywhere in a repository that you automatically want to update. In this
 guide we will use `templates/README.md.tpl`.
 
-You can find an [example template on the `markscribe2` repository](https://github.com/sheerlox/markscribe2/blob/master/templates/github-profile.tpl).
+You can find an [example template on the `markscribe2` repository](https://github.com/sheerlox/markscribe2/blob/main/templates/github-profile.tpl).
 
 2. In order to access some of GitHub's API, you need to provide a valid GitHub
 token as a secret called `PERSONAL_GITHUB_TOKEN`. You can create a new token by
@@ -39,9 +39,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
 
-      - uses: sheerlox/readme-scribe2@master
+      - uses: sheerlox/readme-scribe2@main
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
         with:
@@ -64,9 +64,9 @@ need to update the above config for `git-auto-commit-action` accordingly.
 
 This action will be triggered once per hour, parses `templates/README.md.tpl`
 and generates a new `README.md` for you, and eventually pushes the changes to
-the `master` branch. Make sure to adjust the input values `template` and
+the `main` branch. Make sure to adjust the input values `template` and
 `writeTo` to suit your needs.
 
 ## Example output
 
-![readme-scribe2 example output](https://github.com/sheerlox/readme-scribe2/raw/master/assets/template_example.png)
+![readme-scribe2 example output](https://github.com/sheerlox/readme-scribe2/raw/main/assets/template_example.png)
